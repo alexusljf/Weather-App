@@ -1,25 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import Weather from "./components/Weather/weather"
+import Header from "./components/header/Header"
+import checkWeather from './oneWeather/oneWeather';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          hi
-        </p>
-        <a
-          className="App-link"
-          href="https://github.com/alexusljf/Weather-App"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          github repo
-        </a>
-      </header>
+      <Header/>
+      <Weather/>
     </div>
   );
 }
-
+checkWeather();
 export default App;
