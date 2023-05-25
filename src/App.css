@@ -1,16 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 .App {
   text-align: center;
-  background-color: rgba(16, 68, 57, 0.719);
-  font-family: Arial, Helvetica, sans-serif;
-  
-  height: 100%;
+  min-height: 100vh;
+  background-color: rgba(192, 185, 179, 0.671);
+  font-family: 'Inter', sans-serif;
 }
-
-.App-logo {
-  height: 10vmin;
-  pointer-events: none;
+.placeholder{
+  padding-top: 10vh;
+  font-size: 26px;
 }
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

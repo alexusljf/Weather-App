@@ -1,8 +1,16 @@
-import './weather.css';
+import React, { useEffect } from "react";
+import checkWeather from "../../oneWeather/oneWeather";
 
-function weather(){
+// The Weather component will re-render when the city prop changes and call the checkWeather function with the updated city value.
+
+function Weather({ city }) {
+    useEffect(() => {checkWeather(city);}, [city]);
+
+    // placeholder fields
+
     return(
         <div className = "weatherSection">
+            <img src="./placeholder.png" className="weatherIcon"/>
             <p className= "weatherCondition"> weather (eg. rain) </p>
             <h1 className = "temp">Temparature</h1>
             <h3 className = "feelsLike">Feels Like </h3>
@@ -23,4 +31,4 @@ function weather(){
         </div>
     )
 }
-export default weather;
+export default Weather;

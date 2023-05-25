@@ -8,7 +8,7 @@ function Header() {
         <>
         <div className = "topBar">
             <div className='leftSection'>
-                <h1>Should I Run Today?</h1>
+                <h1 className = "should">Should I Run Today? 🏃‍♂️</h1>
             </div>
             <div className="rightSection">
                 <a href="https://github.com/alexusljf" target="_blank">
