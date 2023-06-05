@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import Weather from "./components/Weather/weather";
-import Header from "./components/header/Header";
+import Header from "./components/header/header";
 import checkWeather from "./oneWeather/oneWeather";
 import SearchBar from "./components/SearchBar/SearchBar";
 
@@ -20,7 +20,7 @@ function App() {
 checkWeather(city);
   return (
     <div className="App">
-      <Header />
+      <Header city={city}/>
       <h1 className = "placeholder"> 
         Not in Singapore? Enter your City here!
       </h1>

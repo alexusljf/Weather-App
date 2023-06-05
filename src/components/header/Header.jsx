@@ -1,14 +1,18 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquareGithub } from '@fortawesome/free-brands-svg-icons'
-import './Header.css';
+import './header.css';
+import React, { useEffect } from "react";
+import checkWeather from "../../oneWeather/oneWeather";
 
-function Header() {
+function Header({ city }) {
+    useEffect(() => {checkWeather(city);}, [city]);
 
     return(
         <>
         <div className = "topBar">
             <div className='leftSection'>
                 <h1 className = "should">Should I Run Today? 🏃‍♂️</h1>
+                <h1 className = "headerCountry"> country code </h1>
             </div>
             <div className="rightSection">
                 <a href="https://github.com/alexusljf" target="_blank">

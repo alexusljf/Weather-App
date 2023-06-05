@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import checkWeather from "../../oneWeather/oneWeather";
+import './weather.css';
 
 // The Weather component will re-render when the city prop changes and call the checkWeather function with the updated city value.
 
