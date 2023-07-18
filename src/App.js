@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import Weather from "./components/Weather/weather";
 import Header from "./components/header/header";
-import checkWeather from "./oneWeather/oneWeather";
+import checkWeather from "./openWeather/openWeather";
 import SearchBar from "./components/SearchBar/SearchBar";
 
 // The App component maintains the city state and passes it to the Weather component

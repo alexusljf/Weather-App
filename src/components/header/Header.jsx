@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquareGithub } from '@fortawesome/free-brands-svg-icons'
 import './header.css';
 import React, { useEffect } from "react";
-import checkWeather from "../../oneWeather/oneWeather";
+import checkWeather from "../../openWeather/openWeather";
 
 function Header({ city }) {
     useEffect(() => {checkWeather(city);}, [city]);
