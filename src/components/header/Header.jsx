@@ -11,7 +11,7 @@ function Header({ city }) {
         <>
         <div className = "topBar">
             <div className='leftSection'>
-                <h1 className = "should">Should I Run Today? 🏃‍♂️</h1>
+                <h1 className = "should">Should I Run? 🏃‍♂️</h1>
                 <h1 className = "headerCountry"> country code </h1>
             </div>
             <div className="rightSection">
