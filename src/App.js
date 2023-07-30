@@ -21,9 +21,7 @@ checkWeather(city);
   return (
     <div className="App">
       <Header city={city}/>
-      <h1 className = "placeholder"> 
-        Not in Singapore? Search for your City here!
-      </h1>
+      <h1 className = "placeholder"> Not in Singapore? Search for your City! </h1>
       <SearchBar onSearch={handleSearch} />
       <Weather city={city} /> 
     </div>

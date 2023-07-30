@@ -18,7 +18,7 @@ function SearchBar({ onSearch }) {
   return (
     <div>
     <div className = "search">
-      <input type="text" value={inputCity} onChange={handleInputChange} className="searchBar"/>
+      <input type="text" value={inputCity} onChange={handleInputChange} placeholder = "Enter your City here!" className="searchBar"/>
       <button onClick={handleSearch} className="searchButton"> Search </button>
     </div>
     <div className="error">

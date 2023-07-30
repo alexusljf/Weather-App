@@ -13,18 +13,22 @@ function Weather({ city }) {
         <div className = "weatherSection">
             <h1 className = "city">City Name</h1>
             <img src="./placeholder.png" className="weatherIcon"/>
-            <p className= "weatherCondition"> weather (eg. rain) </p>
-            <h1 className = "temp">Temparature</h1>
-            <h1 className = "feelsLike">Feels Like </h1>
             <div className = "details">
-                <div className='col'>
-                    <div>
-                        <p className = "humidity"> Humidity% </p>
-                    </div>
+                <p className= "weatherCondition"> weather (eg. rain) </p>
+                <div className= "tempDiv">
+                    <p className = "temp">Temparature</p>
+                    <p className = "feelsLike">Feels Like </p>
                 </div>
-                <div className='col'>
-                    <div>
-                        <p className = "wind"> Wind Speed km/h </p>
+                <div className = "humidWind">
+                    <div className='col'>
+                        <div>
+                            <p className = "humidity"> Humidity% </p>
+                        </div>
+                    </div>
+                    <div className='col'>
+                        <div>
+                            <p className = "wind"> Wind Speed km/h </p>
+                        </div>
                     </div>
                 </div>
             </div>

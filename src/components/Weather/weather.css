@@ -1,7 +1,16 @@
 .city{
-    margin-bottom: -5px;
+    margin-bottom: -3px;
 }
-
+.weatherIcon{
+    display:block;
+    margin:auto;
+}
+.details{
+    display:flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+}
 .recommendation{
     display: inline-block;
     border: 1px;
@@ -9,21 +18,26 @@
     border-color: black;
     padding: 25px;   
     border-radius: 12px;
+    font-size: large;
 }
-
 .feelsLike{
     display:inline-block;
 }
-
-.weatherIcon{
-    display:block;
-    margin:auto;
-}
-
 .temp{
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 10px;    
 }
+.weatherCondition{
+    display: inline-block;
+    margin-top: -3px;
+}
+.humidWind{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+
 
 @media (max-width: 430px){
     .recommendation, .weatherCondition{
