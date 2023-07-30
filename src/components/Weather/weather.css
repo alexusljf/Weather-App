@@ -2,6 +2,29 @@
     margin-bottom: -5px;
 }
 
+.recommendation{
+    display: inline-block;
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    padding: 25px;   
+    border-radius: 12px;
+}
+
+.feelsLike{
+    display:inline-block;
+}
+
+.weatherIcon{
+    display:block;
+    margin:auto;
+}
+
+.temp{
+    display: inline-block;
+    margin-right: 10px;
+}
+
 @media (max-width: 430px){
     .recommendation, .weatherCondition{
         padding-left: 10px;

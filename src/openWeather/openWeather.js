@@ -21,7 +21,7 @@ async function checkWeather(city){
 
     document.querySelector(".weatherCondition").innerHTML = "Weather Conditions: " + data.weather[0].main + ", " + data.weather[0].description;
     document.querySelector(".city").innerHTML = data.name;
-    document.querySelector(".temp").innerHTML = data.main.temp + "°C";
+    document.querySelector(".temp").innerHTML = data.main.temp + "°C,";
     document.querySelector(".feelsLike").innerHTML = "Feels Like " + data.main.feels_like + "°C";
     document.querySelector(".humidity").innerHTML = "Humidity: " + data.main.humidity + "%";
     document.querySelector(".wind").innerHTML = "Wind Speed: " + data.wind.speed + "km/h";
@@ -66,7 +66,11 @@ async function checkWeather(city){
         case "Tornado":
             recommendationString = recommendationString.concat("Atmosphere might not be too good right now. ");
             flag = 0;
-            break;                            
+            break;               
+        default:
+            recommendationString = recommendationString.concat("Error! Weather Condition not detected. ");
+            flag = 0;
+                  
     }
     // temperatures
     if(flag !== 0){
@@ -94,8 +98,11 @@ async function checkWeather(city){
     else{
         recommendationString = recommendationString.concat("Should be okay to run!!");    
     }
+
+    /* For Debugging
     console.log(recommendationString);
     console.log(flag);
+    */
     document.querySelector(".recommendation").innerHTML = recommendationString;
     document.querySelector(".weatherIcon").src = imgURL;
 }

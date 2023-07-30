@@ -22,7 +22,7 @@ checkWeather(city);
     <div className="App">
       <Header city={city}/>
       <h1 className = "placeholder"> 
-        Not in Singapore? Enter your City here!
+        Not in Singapore? Search for your City here!
       </h1>
       <SearchBar onSearch={handleSearch} />
       <Weather city={city} /> 

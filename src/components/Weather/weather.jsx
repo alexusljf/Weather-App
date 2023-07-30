@@ -15,8 +15,7 @@ function Weather({ city }) {
             <img src="./placeholder.png" className="weatherIcon"/>
             <p className= "weatherCondition"> weather (eg. rain) </p>
             <h1 className = "temp">Temparature</h1>
-            <h3 className = "feelsLike">Feels Like </h3>
-            <p className = "recommendation"> Placeholder </p>
+            <h1 className = "feelsLike">Feels Like </h1>
             <div className = "details">
                 <div className='col'>
                     <div>
@@ -29,6 +28,7 @@ function Weather({ city }) {
                     </div>
                 </div>
             </div>
+            <p className = "recommendation"> Placeholder </p>
         </div>
     )
 }

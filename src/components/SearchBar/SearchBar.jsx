@@ -10,6 +10,7 @@ function SearchBar({ onSearch }) {
     setInputCity(e.target.value);
   };
 
+  // In App.js, onSearch={handleSearch} was passed in. So this is handleSearch(inputCity), which calls setCity(inputCity).
   const handleSearch = () => {
     onSearch(inputCity);
   };
