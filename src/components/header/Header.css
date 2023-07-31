@@ -41,17 +41,20 @@
 }
 
 @media (max-width: 430px){
+    .leftSection{
+        gap: 10px;
+    }
     .topBar{
-        height: 50px;
+        height: 60px;
         padding-left: 10px;
         padding-right: 10px;
     }
     .faicon{
-        font-size: 24px;
+        font-size: 30px;
         margin-left: 5px; 
         margin-right: 5px; 
     }
     .should, .headerCountry{
-        font-size: 15px;
+        font-size: 20px;
     }
 }

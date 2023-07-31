@@ -41,7 +41,7 @@
 
 @media (max-width: 430px){
     .recommendation, .weatherCondition{
-        padding-left: 10px;
-        padding-right: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
     }
 }
