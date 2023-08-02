@@ -14,11 +14,16 @@ function SearchBar({ onSearch }) {
   const handleSearch = () => {
     onSearch(inputCity);
   };
-
+  // Allows use of Enter key instead of clicking on Search Button
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      handleSearch();
+    }
+  };
   return (
     <div>
     <div className = "search">
-      <input type="text" value={inputCity} onChange={handleInputChange} placeholder = "Enter your City here!" className="searchBar"/>
+      <input type="text" value={inputCity} onChange={handleInputChange} placeholder = "Enter your City here!" className="searchBar" onKeyDown = {handleKeyDown}/>
       <button onClick={handleSearch} className="searchButton"> Search </button>
     </div>
     <div className="error">
