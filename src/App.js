@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import Weather from "./components/Weather/weather";
-import Header from "./components/header/header";
+import Header from "./components/header/Header";
 import checkWeather from "./openWeather/openWeather";
 import SearchBar from "./components/SearchBar/SearchBar";
 

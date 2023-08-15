@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquareGithub } from '@fortawesome/free-brands-svg-icons'
-import './header.css';
+import './Header.css';
 import React, { useEffect } from "react";
 import checkWeather from "../../openWeather/openWeather";
 
