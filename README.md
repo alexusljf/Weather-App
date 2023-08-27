@@ -1,5 +1,17 @@
-Web App made in React using OpenWeather's Weather API.
+# Should I Run?
 
-Users can enter a city's name and view the current temperature, weather conditions, wind speed and humidity.
+Welcome to "Should I Run?"! <br>
+I made this web app to learn how to use APIs. <br>
 
-There will also be a recommendation based on the current weather, if the user should run or not.
+## How to Use
+
+* Users can easily input a city's name into the search bar. 
+* Weather conditions for that city will be fetched from the API.
+* The weather conditions and a running recommendation will be displayed.<br>
+
+## Tools Used
+
+* OpenWeather's Weather API
+* React
+* CSS
+* GitHub Pages
