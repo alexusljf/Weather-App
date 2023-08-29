@@ -3,17 +3,17 @@ const apiURL = "https://api.openweathermap.org/data/2.5/weather?units=metric&q="
 
 // function to check the weather from openWeather
 
-async function checkWeather(city){
+async function checkWeather(city, isNightMode){
     const response = await fetch(apiURL + city + `&appid=${apiKey}`); // use fetch to fetch data from the apiURL, await waits for the response
     if(response.status === 404){ // if unable to fetch, display error message and hide the weather section div
         document.querySelector(".error").style.display = "block";
         document.querySelector(".weatherSection").style.display = "none";
-        document.querySelector(".headerCountry").style.display = "none";
+        document.querySelector(isNightMode === false ? ".headerCountryDay" : ".headerCountryNight").style.display = "none";
     }
     else{ // else we are able to fetch so don't show the error message
         document.querySelector(".error").style.display = "none";
         document.querySelector(".weatherSection").style.display = "block";        
-        document.querySelector(".headerCountry").style.display = "block";
+        document.querySelector(isNightMode === false ? ".headerCountryDay" : ".headerCountryNight").style.display = "block";
     }
     var data = await response.json(); // store the fetched data
     
@@ -26,7 +26,7 @@ async function checkWeather(city){
     document.querySelector(".humidity").innerHTML = "Humidity: " + data.main.humidity + "%";
     document.querySelector(".wind").innerHTML = "Wind Speed: " + data.wind.speed + "km/h";
     
-    document.querySelector(".headerCountry").innerHTML = data.main.temp + "°C  " + data.sys.country;
+    document.querySelector(isNightMode === false ? ".headerCountryDay" : ".headerCountryNight").innerHTML = data.main.temp + "°C  " + data.sys.country;
 
     const imgURL = "https://openweathermap.org/img/wn/" + data.weather[0].icon +"@2x.png";
 

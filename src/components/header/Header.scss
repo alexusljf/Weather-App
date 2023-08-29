@@ -1,9 +1,4 @@
-.should, .headerCountry{
-    color: white;
-    font-size: 30px;
-    white-space:nowrap;
-}
-.topBar{
+%topBar{
     background-color: rgb(16, 92, 92);
     position: fixed;
     top:0;
@@ -16,6 +11,12 @@
     padding-right: 30px;
     justify-content: space-between;
 }
+.topBarDay{
+    @extend %topBar;
+}
+.topBarNight{
+    @extend %topBar;
+}
 .leftSection{
     display:flex;
     flex: 1;
@@ -23,21 +24,46 @@
     justify-content: start;
     gap: 20px;
 }
+%leftSectionText{
+    font-size: 30px;
+    white-space:nowrap;
+}
+.shouldDay, .headerCountryDay{
+    @extend %leftSectionText;
+    color: white;
+}
+.shouldNight, .headerCountryNight{
+    @extend %leftSectionText;
+    color: black;
+}
 .rightSection{
     display:flex;
     flex: 1;
     align-items:center;
     justify-content: end;
 }
-.faicon{
+%faicon{
     font-size:36px;
     margin-left:10px; 
     margin-right: 10px; 
-    color:rgb(255, 255, 255);
 }
-.faicon:hover{
+%faicon:hover{
     color: rgb(0, 0, 0);
     transition: 0.1s;
+}
+.faiconDay{
+    @extend %faicon;
+    color:rgb(255, 255, 255);
+}
+.faiconDay:hover{
+    color:rgb(20, 18, 18);
+}
+.faiconNight{
+    @extend %faicon;
+    color:rgb(14, 13, 13);
+}
+.faiconNight:hover{
+    color:rgb(211, 63, 63);
 }
 .switch{
     padding-right:-215px; 

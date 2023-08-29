@@ -1,0 +1,31 @@
+.switch{
+    display: flex;
+    margin: 0;
+    padding: 0px;
+    width: 200px;
+    height: 100px;    
+    justify-content: center;
+    align-items: center;
+}
+// create generic faicon then extend it for different night mode states
+%faicon {
+    font-size:36px;
+    margin-left:10px; 
+    margin-right: 10px; 
+    transition: 0.2s;
+}
+.NightSwitchFaicon{
+    @extend %faicon;
+    color:#293129;
+}
+.NightSwitchFaiconNight{
+    @extend %faicon;
+    color:white;
+}
+@media (max-width: 430px){
+    .NightSwitchFaicon, .NightSwitchFaiconNight{
+        font-size: 24px;
+        margin-left: 5px; 
+        margin-right: 5px; 
+    }
+}
