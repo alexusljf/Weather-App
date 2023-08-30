@@ -6,12 +6,12 @@ const apiURL = "https://api.openweathermap.org/data/2.5/weather?units=metric&q="
 async function checkWeather(city, isNightMode){
     const response = await fetch(apiURL + city + `&appid=${apiKey}`); // use fetch to fetch data from the apiURL, await waits for the response
     if(response.status === 404){ // if unable to fetch, display error message and hide the weather section div
-        document.querySelector(".error").style.display = "block";
+        document.querySelector(isNightMode === false ? ".errorDay" : ".errorNight").style.display = "block";
         document.querySelector(isNightMode === false ? ".weatherSectionDay" : ".weatherSectionNight").style.display = "none";
         document.querySelector(isNightMode === false ? ".headerCountryDay" : ".headerCountryNight").style.display = "none";
     }
     else{ // else we are able to fetch so don't show the error message
-        document.querySelector(".error").style.display = "none";
+        document.querySelector(isNightMode === false ? ".errorDay" : ".errorNight").style.display = "none";
         document.querySelector(isNightMode === false ? ".weatherSectionDay" : ".weatherSectionNight").style.display = "block";        
         document.querySelector(isNightMode === false ? ".headerCountryDay" : ".headerCountryNight").style.display = "block";
     }
@@ -103,8 +103,8 @@ async function checkWeather(city, isNightMode){
     console.log(recommendationString);
     console.log(flag);
     */
-    document.querySelector(".recommendation").innerHTML = recommendationString;
-    document.querySelector(".weatherIcon").src = imgURL;
+    document.querySelector(isNightMode === false ? ".recommendationDay" : ".recommendationNight").innerHTML = recommendationString;
+    document.querySelector(isNightMode === false ? ".weatherIconDay" : ".weatherIconNight").src = imgURL;
 }
 
 export default checkWeather;

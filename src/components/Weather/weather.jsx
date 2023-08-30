@@ -14,7 +14,7 @@ function Weather({ city }) {
     return(
         <div className = {isNightMode === false ? "weatherSectionDay" : "weatherSectionNight"}>
             <h1 className = "city">City Name</h1>
-            <img src="./placeholder.png" className="weatherIcon"/>
+            <img src="./placeholder.png" className = {isNightMode === false ? "weatherIconDay" : "weatherIconNight"} alt = "alt text for weather icon"/>
             <div className = "details">
                 <p className= "weatherCondition"> weather (eg. rain) </p>
                 <div className= "tempDiv">
@@ -34,7 +34,7 @@ function Weather({ city }) {
                     </div>
                 </div>
             </div>
-            <p className = "recommendation"> Placeholder </p>
+            <p className = {isNightMode === false ? "recommendationDay" : "recommendationNight"}> Placeholder </p>
         </div>
     )
 }

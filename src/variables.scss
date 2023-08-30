@@ -1,16 +1,21 @@
 // Day Colours
-$primaryColorDay: #61103d;
-$buttonHoverDay: red;
+$headerColorDay: #61103d;
+$buttonHoverDay: rgb(219, 122, 43);
 $appBackgroundDay: #c5aa7e;
 $buttonTextDay: white;
-$buttonTextDayHover: white;
+$buttonTextDayHover: #61103d;
+$faiconDay: white;
+$faiconDayHover: rgb(219, 122, 43);
 
 // Night Colours
-$primaryColorNight: grey;
-$buttonHoverNight: red;
-$appBackgroundNight: blue;
+$headerColorNight: rgba(41, 41, 41, 0.637);
+$buttonHoverNight: rgb(56, 56, 56);
+$appBackgroundNight: rgb(0, 0, 0);
+$buttonNight: white;
 $buttonTextNight: black;
 $buttonTextNightHover: white;
+$faiconNight: white;
+$faiconNightHover: rgb(110, 110, 110);
 
 // Transition Times
 $transitionTime: 0.2s;

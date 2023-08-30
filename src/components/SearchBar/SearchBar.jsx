@@ -28,8 +28,8 @@ function SearchBar({ onSearch }) {
       <input type="text" value={inputCity} onChange={handleInputChange} placeholder = "Enter your City here!" className="searchBar" onKeyDown = {handleKeyDown}/>
       <button onClick={handleSearch} className={isNightMode === false ? "searchButtonDay" : "searchButtonNight"}> Search </button>
     </div>
-    <div className="error">
-        <p>Invalid City Name</p>
+    <div className={isNightMode === false ? "errorDay" : "errorNight"}>
+        <p>Invalid City Name! <br/>Type another name to continue</p>
     </div>
     </div>
 

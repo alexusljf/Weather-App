@@ -21,5 +21,5 @@ I made this web app to learn how to use APIs. <br>
 
 ## To-Do
 
-- [] Convert CSS to SCSS
-- [] Add Night Mode
+- [x] Convert CSS to SCSS
+- [x] Add Night Mode

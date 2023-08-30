@@ -2,36 +2,46 @@
 %weatherSection{
     flex-direction: column;
     gap: 15px;
-    width: 80%;
+    width: 60%;
     margin: auto;
     margin-top: 20px;
     padding: 20px;
     border-radius: 20px;
     text-align: center;
     transition : $transitionTime;
+    border: 1px solid black;
 }
 .weatherSectionDay{
     @extend %weatherSection;
     background-color: rgb(255, 255, 255);
-    border: 1px solid black;
     box-shadow: 4px 8px rgba(156, 148, 138, 0.26);
 }
 .weatherSectionNight{
     @extend %weatherSection;
-    background-color: rgb(62, 41, 41);
-    border: 1px solid black;
-    box-shadow: 4px 8px rgba(156, 148, 138, 0.26);
+    background-color: #242424;
+    border-color: white;
+    box-shadow: none;
+    color: white;
 }
 .city{
     margin-bottom: 10px;
 }
-.weatherIcon{
+%weatherIcon{
     border: solid 1px;
-    border-radius: 50%;
-    display:block;
-    margin:auto;
-    background-color: #f8ba3da9;
+    border-radius: 45%;
+    display: block;
+    margin: auto;
+    background-color: #ffce6c;
     margin-bottom: 20px;
+    transition: $transitionTime;
+}
+.weatherIconDay{
+    @extend %weatherIcon;
+    border-color: black;
+}
+.weatherIconNight{
+    @extend %weatherIcon;
+    border-color: #242424;
 }
 .details{
     display:flex;
@@ -39,13 +49,25 @@
     margin: auto;
     justify-content: center;
 }
-.recommendation{
+%recommendation{
+    display: inline-block;
+    margin: auto;
+    width: auto;
     border: 1px;
     border-style: solid;
     border-color: black;
     padding: 25px;   
     border-radius: 12px;
     font-size: large;
+    transition: $transitionTime;
+}
+.recommendationDay{
+    @extend %recommendation;
+}
+.recommendationNight{
+    @extend %recommendation;
+    background-color: $headerColorNight;
+    border-color: white;
 }
 .feelsLike{
     display:inline-block;
@@ -68,5 +90,8 @@
     .recommendation, .weatherCondition{
         margin-left: 5px;
         margin-right: 5px;
+    }
+    %weatherSection{
+        width: 80%;
     }
 }
