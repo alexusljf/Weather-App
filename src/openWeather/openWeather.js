@@ -7,12 +7,12 @@ async function checkWeather(city, isNightMode){
     const response = await fetch(apiURL + city + `&appid=${apiKey}`); // use fetch to fetch data from the apiURL, await waits for the response
     if(response.status === 404){ // if unable to fetch, display error message and hide the weather section div
         document.querySelector(".error").style.display = "block";
-        document.querySelector(".weatherSection").style.display = "none";
+        document.querySelector(isNightMode === false ? ".weatherSectionDay" : ".weatherSectionNight").style.display = "none";
         document.querySelector(isNightMode === false ? ".headerCountryDay" : ".headerCountryNight").style.display = "none";
     }
     else{ // else we are able to fetch so don't show the error message
         document.querySelector(".error").style.display = "none";
-        document.querySelector(".weatherSection").style.display = "block";        
+        document.querySelector(isNightMode === false ? ".weatherSectionDay" : ".weatherSectionNight").style.display = "block";        
         document.querySelector(isNightMode === false ? ".headerCountryDay" : ".headerCountryNight").style.display = "block";
     }
     var data = await response.json(); // store the fetched data
@@ -32,7 +32,7 @@ async function checkWeather(city, isNightMode){
 
     // create a recommendation string then append the appropriate strings based on weather condition
     var recommendationString = "";
-    var flag=1; // set flag to 0 for bad conditions
+    var flag = 1; // set flag to 0 for bad conditions
 
     switch(data.weather[0].main){ // switch statement for weather first
         case "Rain":

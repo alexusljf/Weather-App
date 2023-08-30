@@ -1,5 +1,5 @@
+@import "../../variables";
 %topBar{
-    background-color: rgb(16, 92, 92);
     position: fixed;
     top:0;
     left:0;
@@ -10,12 +10,15 @@
     padding-left: 30px;
     padding-right: 30px;
     justify-content: space-between;
+    transition: $transitionTime;
 }
 .topBarDay{
     @extend %topBar;
+    background-color: $primaryColorDay;
 }
 .topBarNight{
     @extend %topBar;
+    background-color: $primaryColorNight;
 }
 .leftSection{
     display:flex;
@@ -26,6 +29,7 @@
 }
 %leftSectionText{
     font-size: 30px;
+    transition: $transitionTime;
     white-space:nowrap;
 }
 .shouldDay, .headerCountryDay{
@@ -34,7 +38,7 @@
 }
 .shouldNight, .headerCountryNight{
     @extend %leftSectionText;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 .rightSection{
     display:flex;
@@ -44,11 +48,11 @@
 }
 %faicon{
     font-size:36px;
+    transition: $transitionTime;
     margin-left:10px; 
     margin-right: 10px; 
 }
 %faicon:hover{
-    color: rgb(0, 0, 0);
     transition: 0.1s;
 }
 .faiconDay{
@@ -65,26 +69,27 @@
 .faiconNight:hover{
     color:rgb(211, 63, 63);
 }
-.switch{
-    padding-right:-215px; 
-    width: 100px;
-    height: 100px;    
-}
 @media (max-width: 430px){
     .leftSection{
         gap: 10px;
     }
-    .topBar{
+    %topBar{
         height: 60px;
         padding-left: 10px;
         padding-right: 10px;
     }
-    .faicon{
+    %faicon{
         font-size: 30px;
         margin-left: 5px; 
         margin-right: 5px; 
     }
-    .should, .headerCountry{
+    %leftSectionText{
         font-size: 20px;
+    }
+    .headerCountryDay, .headerCountryNight{
+        display: none;
+    }
+    .rightSection{
+        gap:0px;
     }
 }

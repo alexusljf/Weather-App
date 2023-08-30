@@ -1,16 +1,18 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import checkWeather from "../../openWeather/openWeather";
-import './weather.css';
+import { NightModeContext } from "../NightModeToggle/NightModeContext";
+import './weather.scss';
 
 // The Weather component will re-render when the city prop changes and call the checkWeather function with the updated city value.
 
 function Weather({ city }) {
     useEffect(() => {checkWeather(city);}, [city]);
-
+    const { isNightMode } = useContext(NightModeContext);
+    
     // placeholder fields
 
     return(
-        <div className = "weatherSection">
+        <div className = {isNightMode === false ? "weatherSectionDay" : "weatherSectionNight"}>
             <h1 className = "city">City Name</h1>
             <img src="./placeholder.png" className="weatherIcon"/>
             <div className = "details">

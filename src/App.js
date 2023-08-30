@@ -28,9 +28,10 @@ function App() {
     <NightModeContext.Provider value={{ isNightMode, toggleNightMode }}>
     <div className={isNightMode === false ? "AppDay" : "AppNight"}>
       <Header city={city}/>
-      <h1 className = "placeholder"> Not in Singapore? Search for your City! </h1>
-      <SearchBar onSearch={handleSearch} />
-      <Weather city={city} /> 
+      <div className = "searchWeatherContainer">
+        <SearchBar onSearch={handleSearch} />
+        <Weather city={city} /> 
+      </div>
     </div>
     </NightModeContext.Provider>
   );

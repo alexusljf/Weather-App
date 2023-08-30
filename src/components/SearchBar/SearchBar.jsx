@@ -1,9 +1,11 @@
-import React, { useState } from "react";
-import './SearchBar.css';
+import React, { useState, useContext } from "react";
+import { NightModeContext } from '../../components/NightModeToggle/NightModeContext';
+import './SearchBar.scss';
 
 // The SearchBar component allows users to input a city and triggers the onSearch function, which updates the city state in the App component. 
 
 function SearchBar({ onSearch }) {
+  const { isNightMode } = useContext(NightModeContext);
   const [inputCity, setInputCity] = useState("");
 
   const handleInputChange = (e) => {
@@ -22,9 +24,9 @@ function SearchBar({ onSearch }) {
   };
   return (
     <div>
-    <div className = "search">
+    <div className = "searchDiv">
       <input type="text" value={inputCity} onChange={handleInputChange} placeholder = "Enter your City here!" className="searchBar" onKeyDown = {handleKeyDown}/>
-      <button onClick={handleSearch} className="searchButton"> Search </button>
+      <button onClick={handleSearch} className={isNightMode === false ? "searchButtonDay" : "searchButtonNight"}> Search </button>
     </div>
     <div className="error">
         <p>Invalid City Name</p>

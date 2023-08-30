@@ -9,9 +9,17 @@ I made this web app to learn how to use APIs. <br>
 * Weather conditions for that city will be fetched from the API.
 * The weather conditions and a running recommendation will be displayed.<br>
 
+* For shared city names, specify the country code:
+    - eg: _"Melbourne, US"_ and _"Melbourne, AU"_
+
 ## Tools Used
 
 * OpenWeather's Weather API
 * React
-* CSS
+* Sass
 * GitHub Pages
+
+## To-Do
+
+- [] Convert CSS to SCSS
+- [] Add Night Mode

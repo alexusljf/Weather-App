@@ -1,0 +1,60 @@
+@import "../../variables";
+.searchBar{
+    width: 200px;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 12px;
+    border: none;
+    font-family: 'Inter', sans-serif;
+}
+.searchBar::placeholder{
+    font-family: 'Inter', sans-serif;
+}
+%searchButton{
+    cursor: pointer;
+    font-size: 20px;
+    border-style: none;
+    border-radius: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Inter', sans-serif;
+    transition: $transitionTime;
+    text-decoration: none;
+}
+%searchButton:hover{
+    transition: 0.1s;
+}
+.searchButtonDay{
+    @extend %searchButton;
+    background-color: $primaryColorDay;
+    color: $buttonTextDay;
+}
+.searchButtonDay:hover{
+    background-color: $buttonHoverDay;
+    color: $buttonTextDayHover;
+}
+.searchButtonNight{
+    @extend %searchButton;
+    background-color: $primaryColorNight;
+    color: rgb(255, 255, 255);
+}
+.searchButtonNight:hover{
+    background-color: $buttonHoverNight;
+    color: $buttonTextDayHover;
+}
+.searchDiv{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex: 1;
+}
+.error{
+    display: none;
+}

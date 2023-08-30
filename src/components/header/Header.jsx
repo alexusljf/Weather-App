@@ -18,9 +18,9 @@ function Header({ city }) {
                 <h1 className = {isNightMode === false ? "headerCountryDay" : "headerCountryNight"}> country code </h1>
             </div>
             <div className="rightSection">
-                <NightModeSwitch className = "switch"/>
+                <NightModeSwitch className = "switchHeader"/>
                 <a href="https://github.com/alexusljf" target="_blank">
-                <FontAwesomeIcon icon={faSquareGithub} className = {isNightMode === false ? "faiconDay" : "faiconNight"} />
+                    <FontAwesomeIcon icon={faSquareGithub} className = {isNightMode === false ? "faiconDay" : "faiconNight"} />
                 </a>
             </div>
         </div>
