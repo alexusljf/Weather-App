@@ -24,7 +24,7 @@
     display:flex;
     flex: 1;
     align-items:center;
-    justify-content: start;
+    justify-content: flex-start;
     gap: 20px;
 }
 %leftSectionText{
@@ -44,7 +44,7 @@
     display:flex;
     flex: 1;
     align-items:center;
-    justify-content: end;
+    justify-content: flex-end;
 }
 %faicon{
     font-size:36px;

@@ -19,7 +19,7 @@ function Header({ city }) {
             </div>
             <div className="rightSection">
                 <NightModeSwitch className = "switchHeader"/>
-                <a href="https://github.com/alexusljf" target="_blank">
+                <a href="https://github.com/alexusljf" target="_blank" rel="noreferrer">
                     <FontAwesomeIcon icon={faSquareGithub} className = {isNightMode === false ? "faiconDay" : "faiconNight"} />
                 </a>
             </div>

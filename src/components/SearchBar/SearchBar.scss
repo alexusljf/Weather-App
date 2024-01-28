@@ -1,10 +1,10 @@
 @import "../../variables";
-.searchDiv{
+.searchInner{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
     flex: 1;
     margin-bottom: 20px;
     margin-top: 15px;
@@ -57,6 +57,32 @@
     background-color: $buttonHoverNight;
     color: $buttonTextNightHover;
 }
+.dropdownDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+%dropdownDivSelect{
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 12px;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+}
+.dropdownDivSelectCountry{
+    @extend %dropdownDivSelect;
+    width: 400px;
+}
+.dropdownDivSelectState{
+    @extend %dropdownDivSelect;
+    width: 300px;
+}
 %error{
     display: none;
     border: solid 1px;
@@ -83,5 +109,22 @@
     }
     %error{
         width: 80%;
+    }
+    .dropdownDiv{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .dropdownDivSelectCountry{
+        @extend %dropdownDivSelect;
+        width: 300px;
+    }
+    .dropdownDivSelectState{
+        @extend %dropdownDivSelect;
+        width: 250px;
     }
 }
